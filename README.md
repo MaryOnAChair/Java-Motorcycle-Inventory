@@ -7,12 +7,59 @@ Customize the HTML user interface for your customer’s application. The user in
 
 ---
 
-- File Name:
-- Line Number:
-- Change:
+- File Name:confirmationaddproduct.html
+- Line Number: 10
+- Change: changed product to motorcycle
 
+-
 
+- File Name:confirmationdeleteproduct.html
+- Line Number:10
+- Change:changed product to motorcycle
+
+-
+
+- File Name:InhousePartForm.html
+- Line Number:10
+- Change:"Inhouse" to "OEM"
+
+-
+
+- File Name:negativeerror.html
+- Line Number:8
+- Change:"product" to "motorcycle"
+
+-
+
+- File Name: OutsourcedPartForm.html
+- Line Number:10
+- Change:"Outsourced" to "Aftermarket"
  
+-
+
+- File Name:productForm.html
+- Line Number:12
+- Change:"product" to "motorcycle"
+
+-
+
+- File Name:saveproductscreen.html
+- Line Number:8
+- Change:"product" to "motorcycle"
+
+-
+
+- File Name:
+	- Line Number:14-20
+		- Change:Changed title and added css
+	- Line Number: 25-26
+		- Change:changed heading and added image
+	- Line Number:37-38
+		- Change:Chnaged button names
+	- Line Number:60
+		- Change:"products" to "motorcycles"
+	- Line Number:74
+		- Change:"product" to "motorcycle"
  ---
 #- Part D
 
