@@ -131,9 +131,22 @@ Add a “Buy Now” button to your product list. Your “Buy Now” button must 
  
 ---
 
-- File Name:
-- Line Number:
-- Change:
+- File Name: mainscreen.html
+- Line Number:106
+- Change: Added buy now button
+
+-
+
+- File Name: AddProductController.java
+- Line Number: 178-201
+- Change: Added mapping and logic for buy now button
+
+-
+
+- File Name: failure.html/success.html
+- Line Number: 1-12
+- Change: Added failure and success pages
+
 
 ---
 
