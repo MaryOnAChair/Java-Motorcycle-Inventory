@@ -102,9 +102,22 @@ Add a sample inventory appropriate for your chosen store to the application. You
 
 ---
 
-- File Name:
-- Line Number:
-- Change:
+- File Name: BootStrapData.java
+- Line Number: 47 -110
+- Change: Added products and parts to sample inventory
+
+-
+
+- File Name: BootStrapData.java
+- Line Number: 3/7/35/41
+- Change: Imports for outsourced and inhouse parts
+
+-
+
+-  File Name: application.properties
+- Line Number: 6
+- Change: Edited database url
+
 
 ---
  
