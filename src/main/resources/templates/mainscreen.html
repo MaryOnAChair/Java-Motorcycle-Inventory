@@ -17,6 +17,18 @@
         body{background-color: azure;}
         h1{padding-left: 25%;}
         img{margin-left: 23%;}
+        #aboutLink{
+            text-decoration-line: none;
+            border:darkblue double 2px;
+            padding: 10px;
+            margin-left: 40%;
+            background-color: dodgerblue;
+            color:black;
+        }
+        #aboutLink:hover{
+            color:white;
+            background-color: darkblue;
+        }
     </style>
 </head>
 <body>
@@ -24,6 +36,8 @@
 <div class="container">
     <h1>May's Motorcycle Shop</h1>
     <img src="/motoMain.jpg" alt="motorcycle" width="500" height="250" >
+    <hr>
+    <a id="aboutLink" th:href="about.html">About Us</a>
     <hr>
     <h2>Parts</h2>
     <form th:action="@{/mainscreen}">

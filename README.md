@@ -67,9 +67,32 @@ Add an “About” page to the application to describe your chosen customer’s 
 
 ---
 
-- File Name:
-- Line Number:
-- Change:
+- File Name: about.html
+- Line Number:1-95
+- Change: added about page
+
+-
+
+- File Name: aboutController.java
+- Line Number:1-13
+- Change: added controller for about page
+
+-
+
+- File Name: mainscreen.html
+- Line Number: 20-30
+- Change: added style to link to about page
+
+- File Name: mainscreen.html
+- Line Number: 39-40
+- Change: added link to about page
+
+-
+
+- File Name: hondarr.jpg/motoMain.jpg/purple1.jpg/purple2.jpg
+- Line Number: n/a
+- Change: Added images
+
 
 ---
 
