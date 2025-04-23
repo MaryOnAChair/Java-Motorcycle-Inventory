@@ -49,7 +49,7 @@ Customize the HTML user interface for your customer’s application. The user in
 
 -
 
-- File Name:
+- File Name: mainscreen.html
 	- Line Number:14-20
 		- Change:Changed title and added css
 	- Line Number: 25-26
@@ -164,9 +164,58 @@ Modify the parts to track maximum and minimum inventory by doing the following:
 - Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
 ---
-- File Name:
-- Line Number:
-- Change:
+- File Name: mainscreen.html
+	- Line Number: 59-60
+		- Change: Added headings for min and max inventory
+	- Line Number: 69-70
+		- Change: Added additional fields to for max and min inv
+
+-
+
+- File Name: Part.Java
+- Line Number:23
+	- Change: Added validator
+- Line Number:35-39
+	- Change: added Min and Max 
+- Line Number: 64-78
+	- Change: Added getters and setters
+
+-
+
+- File Name:ValidInv.java
+- Line Number:1-23
+- Change:Added validInv
+
+-
+
+- File Name: InvPartValidator.java
+- Line Number:1-34
+- Change: Added validation logic for min and max inventory
+
+-
+
+- File Name:BootStrapData.java
+- Line Number:74-75,83-84,93-94,102-103,112-113
+- Change: Modified sample inventory to include min and max
+
+- 
+
+ 
+- File Name:OutsourcedPartForm.html
+- Line Number: 25-39
+- Change: Added Min/Max Inv to form, adds error messages 
+
+-
+
+- File Name:InhousePartForm.html
+- Line Number: 24-38
+- Change: Added Min/Max Inv to form, adds error messages 
+
+-
+
+- File Name:application.properties
+- Line Number: 6
+- Change:Renames file for persistent storage
 
 ---
 #- Part H

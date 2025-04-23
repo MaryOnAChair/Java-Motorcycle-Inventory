@@ -71,40 +71,47 @@ public class BootStrapData implements CommandLineRunner {
             exhaustLeoVince.setName("Exhaust Leo Vince");
             exhaustLeoVince.setPrice(300.0);
             exhaustLeoVince.setInv(10);
+            exhaustLeoVince.setMinInv(2);
+            exhaustLeoVince.setMaxInv(20);
             outsourcedPartRepository.save(exhaustLeoVince);
-            // Add Min and Max Values
 
             OutsourcedPart mirrorsStealth = new OutsourcedPart();
             mirrorsStealth.setId(20);
             mirrorsStealth.setName("Stealth Mirrors");
             mirrorsStealth.setPrice(100.0);
             mirrorsStealth.setInv(5);
+            mirrorsStealth.setMinInv(2);
+            mirrorsStealth.setMaxInv(15);
             outsourcedPartRepository.save(mirrorsStealth);
-            // Add Min and Max Values
+
 
             InhousePart OEMHondaFairings = new InhousePart();
             OEMHondaFairings.setId(30);
             OEMHondaFairings.setName("OEM Honda Fairings");
             OEMHondaFairings.setPrice(1200.0);
             OEMHondaFairings.setInv(5);
+            OEMHondaFairings.setMinInv(3);
+            OEMHondaFairings.setMaxInv(20);
             inhousePartRepository.save(OEMHondaFairings);
-            // Add Min and Max Values
 
             InhousePart OEMYamahaFairings = new InhousePart();
             OEMYamahaFairings.setId(40);
             OEMYamahaFairings.setName("OEM Yamaha Fairings");
             OEMYamahaFairings.setPrice(1100.0);
             OEMYamahaFairings.setInv(6);
+            OEMYamahaFairings.setMinInv(2);
+            OEMYamahaFairings.setMaxInv(25);
             inhousePartRepository.save(OEMYamahaFairings);
-            // Add Min and Max Values
+
 
             InhousePart DucatiFairings = new InhousePart();
             DucatiFairings.setId(50);
             DucatiFairings.setName("OEM Ducati Fairings");
             DucatiFairings.setPrice(1600.0);
             DucatiFairings.setInv(5);
+            DucatiFairings.setMinInv(2);
+            DucatiFairings.setMaxInv(10);
             inhousePartRepository.save(DucatiFairings);
-            // Add Min and Max Values
 
         }
 
