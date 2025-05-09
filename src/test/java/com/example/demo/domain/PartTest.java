@@ -101,6 +101,41 @@ class PartTest {
         assertEquals(inv,partOut.getInv());
     }
 
+
+    //Outsources Parts Min and Max Tests
+    @Test
+    void outsourcedPartMinWorks() {
+        Part part = new OutsourcedPart();
+        part.setMinInv(5);
+        int result = part.getMinInv();
+        assertEquals(5,result);
+    }
+    @Test
+    void outsourcedPartMaxWorks() {
+        Part part = new OutsourcedPart();
+        part.setMaxInv(5);
+        int result = part.getMaxInv();
+        assertEquals(5,result);
+    }
+
+    //In house Parts Min and Max Tests
+    @Test
+    void inHouseMinWorks() {
+        Part part = new InhousePart();
+        part.setMinInv(5);
+        int result = part.getMinInv();
+        assertEquals(5,result);
+    }
+    @Test
+    void inHouseMaxWorks() {
+        Part part = new InhousePart();
+        part.setMaxInv(5);
+        int result = part.getMaxInv();
+        assertEquals(5,result);
+    }
+
+
+
     @Test
     void getProducts() {
         Product product1= new Product();

@@ -264,13 +264,10 @@ Add validation for between or at the maximum and minimum fields. The validation 
 
   Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
-- File Name:
-- Line Number:
-- Change:
+- File Name: PartTest.Java
+- Line Number: 103-135
+- Change: Added tests for Min and Max for each kind of part
 
-- File Name:
-- Line Number:
-- Change:
 
 ---
 #- Part J
