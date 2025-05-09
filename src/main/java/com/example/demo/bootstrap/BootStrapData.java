@@ -45,37 +45,30 @@ public class BootStrapData implements CommandLineRunner {
 
         if (productRepository.count() == 0 && inhousePartRepository.count() == 0 && outsourcedPartRepository.count() == 0) {
 
-            Product hondaCBR500 = new Product(500, "Honda CBR 500", 5500.0, 8);
+            Product hondaCBR500 = new Product(500, "Honda CBR 500", 5500.0, 25);
             productRepository.save(hondaCBR500);
-            // Add Min and Max Values
 
-            Product yamahaR3 = new Product(300, "Yamaha R3", 5000.0, 10);
+            Product yamahaR3 = new Product(300, "Yamaha R3", 5000.0, 25);
             productRepository.save(yamahaR3);
-            // Add Min and Max Values
 
-            Product hondaCBR600rr = new Product(600, "Honda CBR 600rr", 8000.0, 6);
+            Product hondaCBR600rr = new Product(600, "Honda CBR 600rr", 8000.0, 15);
             productRepository.save(hondaCBR600rr);
-            // Add Min and Max Values
 
-            Product YamahaR7 = new Product(700, "Yamaha R7", 6000.0, 5);
+            Product YamahaR7 = new Product(700, "Yamaha R7", 6000.0, 30);
             productRepository.save(YamahaR7);
-            // Add Min and Max Values
 
-            Product ducatiPanigale = new Product(1000, "Ducati Panigale V4", 25000.0, 4);
+            Product ducatiPanigale = new Product(1000, "Ducati Panigale V4", 25000.0, 20);
             productRepository.save(ducatiPanigale);
-            // Add Min and Max Values
 
-
-            System.out.println("test");
 
 
             OutsourcedPart exhaustLeoVince = new OutsourcedPart();
             exhaustLeoVince.setId(10);
             exhaustLeoVince.setName("Exhaust Leo Vince");
             exhaustLeoVince.setPrice(300.0);
-            exhaustLeoVince.setInv(10);
+            exhaustLeoVince.setInv(50);
             exhaustLeoVince.setMinInv(2);
-            exhaustLeoVince.setMaxInv(20);
+            exhaustLeoVince.setMaxInv(100);
             exhaustLeoVince.setCompanyName("Leo Vince");
             outsourcedPartRepository.save(exhaustLeoVince);
             System.out.println(exhaustLeoVince.getName());
@@ -85,9 +78,9 @@ public class BootStrapData implements CommandLineRunner {
             mirrorsStealth.setId(120);
             mirrorsStealth.setName("Stealth Mirrors");
             mirrorsStealth.setPrice(100.0);
-            mirrorsStealth.setInv(5);
+            mirrorsStealth.setInv(50);
             mirrorsStealth.setMinInv(2);
-            mirrorsStealth.setMaxInv(15);
+            mirrorsStealth.setMaxInv(100);
             mirrorsStealth.setCompanyName("Revzilla");
             outsourcedPartRepository.save(mirrorsStealth);
             System.out.println(mirrorsStealth.getName());
@@ -97,9 +90,9 @@ public class BootStrapData implements CommandLineRunner {
             OEMHondaFairings.setId(130);
             OEMHondaFairings.setName("OEM Honda Fairings");
             OEMHondaFairings.setPrice(1200.0);
-            OEMHondaFairings.setInv(5);
+            OEMHondaFairings.setInv(50);
             OEMHondaFairings.setMinInv(3);
-            OEMHondaFairings.setMaxInv(20);
+            OEMHondaFairings.setMaxInv(100);
             inhousePartRepository.save(OEMHondaFairings);
             System.out.println(OEMHondaFairings.getName());
 
@@ -108,9 +101,9 @@ public class BootStrapData implements CommandLineRunner {
             OEMYamahaFairings.setId(140);
             OEMYamahaFairings.setName("OEM Yamaha Fairings");
             OEMYamahaFairings.setPrice(1100.0);
-            OEMYamahaFairings.setInv(6);
+            OEMYamahaFairings.setInv(50);
             OEMYamahaFairings.setMinInv(2);
-            OEMYamahaFairings.setMaxInv(25);
+            OEMYamahaFairings.setMaxInv(100);
             inhousePartRepository.save(OEMYamahaFairings);
             System.out.println(OEMYamahaFairings.getName());
 
@@ -119,9 +112,9 @@ public class BootStrapData implements CommandLineRunner {
             DucatiFairings.setId(150);
             DucatiFairings.setName("OEM Ducati Fairings");
             DucatiFairings.setPrice(1600.0);
-            DucatiFairings.setInv(5);
+            DucatiFairings.setInv(50);
             DucatiFairings.setMinInv(2);
-            DucatiFairings.setMaxInv(10);
+            DucatiFairings.setMaxInv(100);
             inhousePartRepository.save(DucatiFairings);
             System.out.println(DucatiFairings.getName());
 

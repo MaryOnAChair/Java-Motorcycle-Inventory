@@ -273,7 +273,24 @@ Add validation for between or at the maximum and minimum fields. The validation 
 #- Part J
 Remove the class files for any unused validators in order to clean your code.
 
-- File Name:
-- Line Number:
-- Change:
+- File Name:ValidDeletePart.Java
+- Line Number:All
+- Change: Removed unused validator
 
+-
+
+- File Name:DeletePartValidator.Java
+- Line Number: All
+- Change: Removed unused validator
+
+-
+
+- File Name: BootstrapData.Java
+- Line Number:60,57,54,51,48,69,71,81,83,93,,95,104,106,115,117
+- Change: Updated inventory values
+
+-
+
+- File Name: error.html
+- Line Number: ALL
+- Change: Added error file to git
