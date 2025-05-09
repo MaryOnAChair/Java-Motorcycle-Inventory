@@ -43,7 +43,7 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        if(productRepository.count()==0 && inhousePartRepository.count()==0 && outsourcedPartRepository.count()==0) {
+        if (productRepository.count() == 0 && inhousePartRepository.count() == 0 && outsourcedPartRepository.count() == 0) {
 
             Product hondaCBR500 = new Product(500, "Honda CBR 500", 5500.0, 8);
             productRepository.save(hondaCBR500);
@@ -66,6 +66,9 @@ public class BootStrapData implements CommandLineRunner {
             // Add Min and Max Values
 
 
+            System.out.println("test");
+
+
             OutsourcedPart exhaustLeoVince = new OutsourcedPart();
             exhaustLeoVince.setId(10);
             exhaustLeoVince.setName("Exhaust Leo Vince");
@@ -73,45 +76,54 @@ public class BootStrapData implements CommandLineRunner {
             exhaustLeoVince.setInv(10);
             exhaustLeoVince.setMinInv(2);
             exhaustLeoVince.setMaxInv(20);
+            exhaustLeoVince.setCompanyName("Leo Vince");
             outsourcedPartRepository.save(exhaustLeoVince);
+            System.out.println(exhaustLeoVince.getName());
+
 
             OutsourcedPart mirrorsStealth = new OutsourcedPart();
-            mirrorsStealth.setId(20);
+            mirrorsStealth.setId(120);
             mirrorsStealth.setName("Stealth Mirrors");
             mirrorsStealth.setPrice(100.0);
             mirrorsStealth.setInv(5);
             mirrorsStealth.setMinInv(2);
             mirrorsStealth.setMaxInv(15);
+            mirrorsStealth.setCompanyName("Revzilla");
             outsourcedPartRepository.save(mirrorsStealth);
+            System.out.println(mirrorsStealth.getName());
 
 
             InhousePart OEMHondaFairings = new InhousePart();
-            OEMHondaFairings.setId(30);
+            OEMHondaFairings.setId(130);
             OEMHondaFairings.setName("OEM Honda Fairings");
             OEMHondaFairings.setPrice(1200.0);
             OEMHondaFairings.setInv(5);
             OEMHondaFairings.setMinInv(3);
             OEMHondaFairings.setMaxInv(20);
             inhousePartRepository.save(OEMHondaFairings);
+            System.out.println(OEMHondaFairings.getName());
+
 
             InhousePart OEMYamahaFairings = new InhousePart();
-            OEMYamahaFairings.setId(40);
+            OEMYamahaFairings.setId(140);
             OEMYamahaFairings.setName("OEM Yamaha Fairings");
             OEMYamahaFairings.setPrice(1100.0);
             OEMYamahaFairings.setInv(6);
             OEMYamahaFairings.setMinInv(2);
             OEMYamahaFairings.setMaxInv(25);
             inhousePartRepository.save(OEMYamahaFairings);
+            System.out.println(OEMYamahaFairings.getName());
 
 
             InhousePart DucatiFairings = new InhousePart();
-            DucatiFairings.setId(50);
+            DucatiFairings.setId(150);
             DucatiFairings.setName("OEM Ducati Fairings");
             DucatiFairings.setPrice(1600.0);
             DucatiFairings.setInv(5);
             DucatiFairings.setMinInv(2);
             DucatiFairings.setMaxInv(10);
             inhousePartRepository.save(DucatiFairings);
+            System.out.println(DucatiFairings.getName());
 
         }
 

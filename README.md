@@ -228,15 +228,45 @@ Add validation for between or at the maximum and minimum fields. The validation 
 - Display error messages when adding and updating parts if the inventory is greater than the maximum.
  
 ---
-- File Name:
-- Line Number:
-- Change:
+- File Name: Product.Java
+- Line Number: 20
+- Change: Added validator annotation
+
+-
+
+- Fle Name: Part.Java
+- Line Number:64-65
+- Change: Added min and max variables
+
+-
+
+- File Name: EnufPartsValidator.Java
+- Line Number: 36-42
+- Change: Added constraint logic for displaying error messages to validator
+
+-
+
+- File Name:errorController.java
+- Line Number: 1-14
+- Change: Added error controller
+
+-
+
+- File Name: application.properties
+- Line Number: 14
+- Change: Added path for error page
+
+
 
 ---
 
 #- Part I
 
   Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+
+- File Name:
+- Line Number:
+- Change:
 
 - File Name:
 - Line Number:

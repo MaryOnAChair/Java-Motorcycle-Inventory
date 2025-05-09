@@ -2,6 +2,7 @@ package com.example.demo.domain;
 
 import com.example.demo.validators.ValidDeletePart;
 import com.example.demo.validators.ValidInv;
+import org.springframework.ui.Model;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -23,6 +24,7 @@ import java.util.Set;
 @Table(name="Parts")
 @ValidInv
 
+
 public abstract class Part implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -36,14 +38,14 @@ public abstract class Part implements Serializable {
     @Min(value = 0, message = "Min Inventory value must be positive")
     int minInv;
 
-    @Max(value = 0, message = "Max Inventory value must be positive")
+    //@Max(value = 0, message = "Max Inventory value must be positive")
     int maxInv;
 
 
     @ManyToMany
-    @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
-            inverseJoinColumns=@JoinColumn(name="product_id"))
-    Set<Product> products= new HashSet<>();
+    @JoinTable(name = "product_part", joinColumns = @JoinColumn(name = "part_id"),
+            inverseJoinColumns = @JoinColumn(name = "product_id"))
+    Set<Product> products = new HashSet<>();
 
     public Part() {
     }
@@ -54,11 +56,13 @@ public abstract class Part implements Serializable {
         this.inv = inv;
     }
 
-    public Part(long id, String name, double price, int inv) {
+    public Part(long id, String name, double price, int inv, int minInv, int maxInv) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.inv = inv;
+        this.minInv = minInv;
+        this.maxInv = maxInv;
     }
 
     public int getMinInv() {
@@ -70,12 +74,14 @@ public abstract class Part implements Serializable {
     }
 
     public int getMaxInv() {
+
         return maxInv;
     }
 
     public void setMaxInv(int maxInv) {
         this.maxInv = maxInv;
     }
+
     public long getId() {
         return id;
     }
@@ -116,9 +122,10 @@ public abstract class Part implements Serializable {
         this.products = products;
     }
 
-    public String toString(){
+    public String toString() {
         return this.name;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -133,4 +140,7 @@ public abstract class Part implements Serializable {
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
     }
+
+
+
 }

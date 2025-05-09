@@ -1,8 +1,8 @@
 package com.example.demo.domain;
 
-import com.example.demo.validators.ValidEnufParts;
+import com.example.demo.validators.ValidInv;
 import com.example.demo.validators.ValidProductPrice;
-
+import com.example.demo.validators.ValidEnufParts;
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
@@ -17,8 +17,9 @@ import java.util.Set;
  */
 @Entity
 @Table(name="Products")
-@ValidProductPrice
 @ValidEnufParts
+@ValidProductPrice
+
 public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
