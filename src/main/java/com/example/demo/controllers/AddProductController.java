@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
+import com.example.demo.repositories.PartRepository;
 import com.example.demo.service.PartService;
 import com.example.demo.service.PartServiceImpl;
 import com.example.demo.service.ProductService;
@@ -89,21 +90,11 @@ public class AddProductController {
  //       this.product=product;
 //        product.getParts().addAll(assparts);
 
-        else {
-            if (product.getId() != 0) {
-                Product product2 = repo.findById((int) product.getId());
-                if (product.getInv() - product2.getInv() > 0) {
-                    for (Part p : product2.getParts()) {
-                        int inv = p.getInv();
-                        p.setInv(inv - (product.getInv() - product2.getInv()));
-                        partService1.save(p);
-                    }
-                }
-            } else {
+        if(product.getId() == 0) {
                 product.setInv(0);
             }
 
-        }
+
             repo.save(product);
             return "confirmationaddproduct";
 
